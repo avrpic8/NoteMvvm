@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    android:id="@+id/note_card"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="3dp"
+    app:cardCornerRadius="5dp"
+    app:cardElevation="2dp"
+    android:clickable="true"
+    app:cardBackgroundColor="@color/cardview_light_background">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/txt_title_note"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@id/attachments_layout"
+            android:layout_alignParentLeft="true"
+            tools:text="android"
+            android:textColor="@android:color/black"
+            android:layout_margin="5dp"
+            android:textStyle="bold"
+            android:gravity="start" />
+        <LinearLayout
+            android:id="@+id/attachments_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@+id/txt_title_note"
+            android:layout_marginRight="5dp"
+            android:orientation="vertical"
+            android:gravity="top">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/img_favorite"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:src="@drawable/ic_favorite_white"
+                android:visibility="gone"/>
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/img_pin_to_notif"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:src="@drawable/ic_notif_on_white"
+                android:visibility="gone"/>
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/img_attach"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:src="@drawable/ic_attachment"
+                android:visibility="gone"/>
+
+        </LinearLayout>
+        <TextView
+            android:id="@+id/txt_body_note"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/txt_title_note"
+            android:layout_toLeftOf="@id/attachments_layout"
+            tools:text="my first notes"
+            android:textColor="@android:color/black"
+            android:layout_marginRight="5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginBottom="10dp"
+            android:textStyle="normal"
+            android:gravity="start" />
+
+    </RelativeLayout>
+
+</com.google.android.material.card.MaterialCardView>
